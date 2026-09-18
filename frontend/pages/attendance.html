@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Attendance - Student Management System
+    </title>
+
+    <link rel="stylesheet"
+        href="../css/style.css">
+
+    <link rel="stylesheet"
+        href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="../css/forms.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Student MS
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                Students
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="departments.html">
+                Departments
+            </a>
+
+            <a href="attendance.html"
+               class="active">
+                Attendance
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+
+        <!-- Page Header -->
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Attendance
+                </h1>
+
+                <p>
+                    Manage student attendance from here.
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Mark Attendance Form -->
+        <section class="form-container">
+
+
+            <div class="form-header">
+
+                <h2>
+                    Mark Attendance
+                </h2>
+
+                <p>
+                    Select student, course, date and attendance status.
+                </p>
+
+            </div>
+
+
+
+            <form id="attendanceForm">
+
+
+                <!-- Student -->
+                <div class="form-group">
+
+                    <label for="student">
+
+                        Student
+
+                        <span class="required">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <select
+                        id="student"
+                        required
+                    >
+
+                        <option value="">
+                            Select Student
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Course -->
+                <div class="form-group">
+
+                    <label for="course">
+
+                        Course
+
+                        <span class="required">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <select
+                        id="course"
+                        required
+                    >
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Date -->
+                <div class="form-group">
+
+                    <label for="date">
+
+                        Date
+
+                        <span class="required">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Status -->
+                <div class="form-group">
+
+                    <label for="status">
+
+                        Attendance Status
+
+                        <span class="required">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <select
+                        id="status"
+                        required
+                    >
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="Present">
+                            Present
+                        </option>
+
+                        <option value="Absent">
+                            Absent
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Mark Attendance
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             ALL ATTENDANCE RECORDS
+        =========================================== -->
+
+        <section class="form-container">
+
+
+            <div class="form-header">
+
+                <h2>
+                    All Attendance Records
+                </h2>
+
+                <p>
+                    View, edit and delete attendance records.
+                </p>
+
+            </div>
+
+
+
+            <!-- Attendance Table -->
+
+            <div class="table-container">
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Course
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody id="attendanceTable">
+
+                        <!--
+                            Attendance records will
+                            be loaded here by
+                            attendance.js
+                        -->
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="../js/api.js"></script>
+
+    <script src="../js/attendance.js"></script>
+
+
+</body>
+
+</html>

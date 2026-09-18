@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Departments - Student Management System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/forms.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Student MS
+        </div>
+
+        <nav>
+
+            <a href="../index.html">
+                Dashboard
+            </a>
+
+            <a href="students.html">
+                Students
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="departments.html" class="active">
+                Departments
+            </a>
+
+            <a href="attendance.html">
+                Attendance
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Departments
+                </h1>
+
+                <p>
+                    Manage all departments from here.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Add Department Form -->
+        <section class="form-container">
+
+            <div class="form-header">
+
+                <h2>
+                    Add New Department
+                </h2>
+
+                <p>
+                    Enter department information below.
+                </p>
+
+            </div>
+
+
+            <form id="departmentForm">
+
+                <!-- Department Name -->
+                <div class="form-group">
+
+                    <label for="name">
+
+                        Department Name
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="e.g. Computer Science"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Department Code -->
+                <div class="form-group">
+
+                    <label for="code">
+
+                        Department Code
+                        <span class="required">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="code"
+                        placeholder="e.g. CS"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Add Department
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Departments List -->
+        <section class="form-container">
+
+            <div class="form-header">
+
+                <h2>
+                    All Departments
+                </h2>
+
+                <p>
+                    View, edit and delete departments.
+                </p>
+
+            </div>
+
+
+            <!-- Department Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Department Name
+                            </th>
+
+                            <th>
+                                Department Code
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="departmentTable">
+
+                        <!-- Departments will be loaded here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="../js/api.js"></script>
+    <script src="../js/departments.js"></script>
+
+</body>
+
+</html>

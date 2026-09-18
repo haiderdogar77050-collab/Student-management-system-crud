@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Student MS
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="pages/students.html">
+                Students
+            </a>
+
+            <a href="pages/courses.html">
+                Courses
+            </a>
+
+            <a href="pages/departments.html">
+                Departments
+            </a>
+
+            <a href="pages/attendance.html">
+                Attendance
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Welcome to Student Management System
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <!-- Students -->
+            <div class="stat-card">
+
+                <h3>
+                    Total Students
+                </h3>
+
+                <p id="totalStudents">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Courses -->
+            <div class="stat-card">
+
+                <h3>
+                    Total Courses
+                </h3>
+
+                <p id="totalCourses">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Departments -->
+            <div class="stat-card">
+
+                <h3>
+                    Departments
+                </h3>
+
+                <p id="totalDepartments">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Attendance -->
+            <div class="stat-card">
+
+                <h3>
+                    Attendance Records
+                </h3>
+
+                <p id="totalAttendance">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+            <div class="action-buttons">
+
+                <a href="pages/students.html">
+                    Add Student
+                </a>
+
+                <a href="pages/courses.html">
+                    Add Course
+                </a>
+
+                <a href="pages/departments.html">
+                    Add Department
+                </a>
+
+                <a href="pages/attendance.html">
+                    Mark Attendance
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
