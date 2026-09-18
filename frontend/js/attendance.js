@@ -2,9 +2,7 @@ const attendanceForm =
     document.getElementById("attendanceForm");
 
 
-// ==========================================
-// LOAD STUDENTS
-// ==========================================
+
 
 async function loadStudents() {
 
@@ -47,9 +45,7 @@ async function loadStudents() {
 }
 
 
-// ==========================================
-// LOAD COURSES
-// ==========================================
+
 
 async function loadCourses() {
 
